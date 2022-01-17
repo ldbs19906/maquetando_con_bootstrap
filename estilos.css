@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+
+    background-image: url(./img/backgroundbody.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;/*negrita*/
+    display:grid;  
+
+}
+
+/*HEADER*/
+
+header{
+    
+    background: #4e94ab;
+}
+
+#btn-menu{
+    display: none; /*desaparece el boton de la maquetacion*/
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right:1px solid #fff ;
+    
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul{
+    margin: 0;
+    list-style:none ;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    /*Para que este alineado a la derecha*/
+    justify-content: flex-end;
+    
+}
+
+.menu li{
+
+   border-right:1px solid #fff ;
+
+
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+/*Fin header*/
+
+
+.container{
+    
+    width: 90%;
+    max-width: 10000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+/*Para maracar los contenedores*/
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > .related-post,
+.container > .div{
+
+    background: rgb(94, 13, 13);
+    padding:20px;
+    border: 1px solid black; 
+}
+
+/*Organizar header y footer*/
+
+.container .header{
+
+    grid-column: 1/6 ; /*Para que el header  abarquen las 6 columnas*/
+    
+    background-image: url(./img/65793-pizza.jpg);
+    background-color: brown;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: red solid;
+
+    color:rgb(15, 61, 25);
+    font-size: 30px;
+    padding:2rem;
+}
+.container .footer{
+    grid-column: 1/6 ; /*Para que el header y footer abarquen las 6 columnas*/
+    background: rgb(38, 38, 139);
+    color: #fff;
+    text-align: center;
+}
+
+/*Organizar el contenido*/
+
+.container > .content{
+    grid-column: span 3; /*Se indica que abarca 3 columnas*/
+    background-color: rgb(224, 107, 107);
+
+}
+
+.content > .article{
+
+    background: #808390;
+    padding:20px;
+    margin-top: 5px;
+    color: #dfe6e9;
+}
+
+.content .article h1,
+.content .article p{
+    padding:10px;
+}
+
+
+.container .sidebar{
+    grid-column: span 2;
+    background: #485460;
+    color:#fff;
+    display: flex; /*Uso flexbox para centrar los elementos*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.container .sidebar img{
+
+    width: 100%;
+    margin-top: 5px;
+
+}
+
+.container .related-post{
+    background: #2d3436;
+    color:#fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /*se complementa con hover*/
+
+}
+
+.container .related-post:hover{
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+
+    
+}
+
+/*Fomrmulario*/
+form{
+
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding:10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    grid-column: 2/5;
+}
+
+h2{
+    color:#fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    
+}
+
+textarea{
+    min-height: 100px;
+    min-width: 200px;
+    max-width: 100%;
+
+}
+
+#boton{
+    background: #31384a;
+    color:#fff;
+    padding: 20px;
+    
+}
+
+#boton:hover{
+    cursor:pointer;
+    
+}
+
+@media(max-width:480){
+    form{
+        width: 100%;
+    }
+}
+/*fin formulario*/
+/*--------------footer---------------------*/
+.footer__flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__menu{
+
+    list-style: none;
+    text-align: center;
+}
+
+.footer__menu a{
+
+    color:white;
+    text-decoration: none;
+
+}
+
+/*Para celular*/
+
+@media(max-width:768px ){
+
+    header label{
+        display: block;
+        
+    }
+
+    .menu{
+        position: absolute;
+        background: #4e94ab;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+       
+    }
+
+    .menu ul{
+        flex-direction: column;
+        
+
+    }
+    .menu li{
+        border-top: 1px solid #fff ;
+        
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin:0;
+                
+
+    }
+
+    .container .header{
+        text-align: center;
+    }
+
+    .container .content{
+
+        grid-column: 1/-1; /*Para que abarque todo el ancho*/
+    }
+
+    .container .sidebar{
+
+        grid-column: 1/-1; /*Para que abarque desde el inicio hasta el fin*/
+    }
+
+    .container .related-post{
+
+        grid-column: 1/-1; 
+    }
+
+    form{
+        width: 100%;
+    }
+}
