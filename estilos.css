@@ -6,7 +6,7 @@
 body{
     
 
-     background-image: url(./img/backgroundbody.jpg);
+    background-image: url(./img/backgroundbody.jpg);
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
@@ -54,7 +54,7 @@ body{
 
 .container .header{
 
-    grid-column: 1/6 ; /*Para que el header  abarquen las 6 columnas*/
+    grid-column: 1/6 ; 
     
     background-image: url(./img/65793-pizza.jpg);
     background-color: brown;
@@ -65,7 +65,7 @@ body{
 
     color:rgb(15, 61, 25);
     font-size: 30px;
-    padding:2rem;
+    padding:2rem; 
 }
 .container .footer{
     grid-column: 1/6 ; /*Para que el header y footer abarquen las 6 columnas*/
