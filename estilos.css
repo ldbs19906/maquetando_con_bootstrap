@@ -199,12 +199,7 @@ textarea{
     
 }
 
-@media(max-width:480){
-    form{
-        width: 100%;
-    }
-}
-/*fin formulario*/
+
 
 /*Para celular*/
 
@@ -229,7 +224,9 @@ textarea{
         grid-column: 1/-1; 
     }
     /*Para formulario*/
+
+
     form{
-        width: 100%;
+        width: 120%;
     }
 }
